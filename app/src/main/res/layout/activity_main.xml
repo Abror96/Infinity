@@ -5,15 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#462445"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:textSize="68sp"
+        android:textAllCaps="true"
+        android:textColor="#ad7373"
+        android:text="Infinity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:text="your meditation teacher"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/sign_fb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="F"
+        android:textColor="#fff"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:background="#653553"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/sign_google"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="G"
+        android:textStyle="bold"
+        android:textSize="27sp"
+        android:background="#6BB6A1"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_fb" />
+
+    <Button
+        android:id="@+id/sign_in_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:background="#FFA753"
+        android:textSize="27sp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_google" />
+
+    <Button
+        android:id="@+id/sign_up_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:background="#B15F6D"
+        android:textSize="27sp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_main" />
 
 </android.support.constraint.ConstraintLayout>

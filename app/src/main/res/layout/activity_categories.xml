@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CategoriesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#462445"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="LogOut"/>
+
+        <Button
+            android:id="@+id/tv_sad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="sad"
+            android:textStyle="bold"
+            android:background="#683653"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_upset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="upset"
+            android:textStyle="bold"
+            android:background="#B15F6D"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_usual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="usual"
+            android:textStyle="bold"
+            android:background="#DE8275"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_aerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="aerial"
+            android:textStyle="bold"
+            android:background="#FD8950"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_angry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="angry"
+            android:textStyle="bold"
+            android:background="#673653"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_decisive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="decisive"
+            android:textStyle="bold"
+            android:background="#FE6D53"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/tv_happy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:text="happy"
+            android:textStyle="bold"
+            android:background="#6BB6A1"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
