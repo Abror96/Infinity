@@ -58,6 +58,7 @@ public class PlayerActivity extends AppCompatActivity implements ExoPlayer.Event
     private String streamUrl; //bbc world service url
     private TrackSelector trackSelector;
 
+    boolean shouldExecuteOnResume;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +66,9 @@ public class PlayerActivity extends AppCompatActivity implements ExoPlayer.Event
         setContentView(R.layout.activity_player);
         ButterKnife.bind(this);
 
+        shouldExecuteOnResume = false;
+
         streamUrl = getIntent().getStringExtra("link");
-        MainActivity.prefConfig.displayToast(streamUrl);
 
         renderersFactory = new DefaultRenderersFactory(getApplicationContext());
         bandwidthMeter = new DefaultBandwidthMeter();
@@ -95,18 +97,32 @@ public class PlayerActivity extends AppCompatActivity implements ExoPlayer.Event
             public void onClick(View v) {
                 if (!isPlaying) {
                     player.setPlayWhenReady(true);
-                    Toast.makeText(PlayerActivity.this, "Exoplayer is playing.", Toast.LENGTH_SHORT).show();
                     play_pause_btn.setBackgroundResource(R.drawable.ic_pause);
                     isPlaying = true;
                 } else {
                     player.setPlayWhenReady(false);
-                    Toast.makeText(PlayerActivity.this, "Exoplayer is on pause.", Toast.LENGTH_SHORT).show();
                     play_pause_btn.setBackgroundResource(R.drawable.ic_play);
-                    isPlaying = true;
+                    isPlaying = false;
                 }
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(shouldExecuteOnResume){
+            player.setPlayWhenReady(true);
+        } else{
+            shouldExecuteOnResume = true;
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        player.setPlayWhenReady(false);
     }
 
     @Override
